@@ -1,0 +1,131 @@
+body{
+    background-color: #FBE0C3;
+}
+
+li{
+    display: inline-block;
+    padding: 10px;
+}
+
+a.nav{
+    text-decoration: none;
+    color:#7D8E95;
+}
+
+nav{
+    /*background-color:#FFBB98;*/
+    background-image:url("../CSS/Pictures/embarrassed-flight-passenger-awakes-after-sleeping-plane-holding-plane-ticket.jpg");
+    /*img => https://www.freepik.com/author/wayhomestudio*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 2px 2px #7D8E95;
+    padding: 4rem;
+    text-align: right;
+    font-size: 1.5rem;
+    font-family: 'Genos', sans-serif;
+    font-family: 'Single Day', cursive;
+
+    border-radius: 10px;
+}
+
+a.nav:hover{
+    background-color: #FBE0C3;
+    color:#344648;
+    padding:1rem;
+    box-shadow: 2px 2px #7D8E95;
+    border-radius: 0.6rem;
+}
+
+.Accueil{
+    height: 100%;
+}
+
+img{
+    width:30%
+}
+nav li.right {
+    float: right;
+}
+
+h3,h1{
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+/*--------------introductory_text---------------------------*/
+
+
+
+.introductory_text{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+
+/*--------------pictures & links---------------------------*/
+
+.travel_pictures{
+    display: flex;
+    align-content: center;
+    padding: 2px;
+    width: 600px;
+
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+
+
+.img_travels{
+    border-radius: 10px;
+}
+
+/*--------------com---------------------------*/
+
+.com_user:nth-child(odd){
+    background-color: white;
+    text-align: justify;
+    padding: 20px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    margin: auto;
+    border-radius: 10px;
+}
+
+span{
+    font-weight: bold;
+}
+/*--------------form---------------------------*/
+
+
+fieldset{
+    width: 250px;
+    border-radius: 5px;
+    margin: 0px 40px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+
+input,textarea {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 250px;
+    font-family: 'Caveat', cursive;
+    resize: none;
+    color: whitesmoke;
+
+}
+
+/*--------------com & form---------------------------*/
+.com_form{
+    display: flex;
+
+
+}
