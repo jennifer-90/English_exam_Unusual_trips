@@ -23,11 +23,11 @@
 
 ******* -- 2nd step -- ************************************************************************************************
 
---> Create a form and his script(-  $_POST['']  -)  --> in the file: " sign_up.php "
+--> Create a form and his script(-  $_POST['']  -)  --> in the file: " sign_up.php " (--for html--)
 
---> Create a folder: "app" and a file: create.php  -->   [app/create.php]
+    --> Be careful to put the "index.php?" in the "action" in the form html
 
-    --> inside: to do the scriptPhp for the form
+--> Create the script inside the file: profile.php (--for php--)
 
 
 ******* -- 3rd step -- ************************************************************************************************

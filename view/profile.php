@@ -1,7 +1,7 @@
 <?php
 
 
-if(!empty($_POST['login'] && !empty($_POST['email']) && !empty($_POST['pwd']))) {
+if(!empty($_POST)) {
     /*** ==>   -- Si ces champs ne sont pas vide.... -- ***/
 
     foreach ($_POST as $key => $values) {
@@ -16,6 +16,17 @@ if(!empty($_POST['login'] && !empty($_POST['email']) && !empty($_POST['pwd']))) 
 
 
 
+    /* Une fois que ça s'arfiche, on remet notre code dans add/create.php
+
+    puis on attaque:
+
+    1. CONNEXION
+    2. QUERY
+    3. EXECUTE
+    ...
+
+
+    */
 
 
 

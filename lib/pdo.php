@@ -4,6 +4,7 @@
 /********** -- Création de notre fonction DE CONNEXION [- "connect()" -] *********/
 
 function connect(){
+
     global $connect;                    /*** --- Création de notre variable rattachée à notre fonction connect --- ***/
     if(is_a($connect, 'PDO')){    /*** ---Si $connect est un objet(=PDO)...   --- ***/
         return $connect;                /*** --- alors on "charge" cette variable  --- ***/
