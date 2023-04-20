@@ -1,6 +1,7 @@
 
 ******* -- 1st step -- ************************************************************************************************
 
+
 --> Create the first file: " index.php "
 
 --> Then, create these files: " header.html "   &&  " menu.php "   &&   " footer.html "  &&  ect ect ...
@@ -21,7 +22,10 @@
                     --> Finally, call your function in the file: "index.php"
 
 
-******* -- 2nd step -- ************************************************************************************************
+
+
+******* -- 2nd step -- *********************************************************** -- °° CREATE PROFILE °° -- *********
+
 
 --> Create a form and his script(-  $_POST['']  -)  --> in the file: " sign_up.php " (--for html--)
 
@@ -30,7 +34,22 @@
 --> Create the script inside the file: profile.php (--for php--)
 
 
-******* -- 3rd step -- ************************************************************************************************
+
+
+
+******* -- 3rd step -- ************************************************************ -- °° CREATE LOGIN °° -- **********
+
+
+--> Create a form for view/login.php
+
+--> Create his script for app/login.php
+
+
+
+
+
+******* -- 4th step -- *************************************************** -- °° CREATE CONSTANTS CONNEXION °° -- *****
+
 
 --> Define(=définir) elements for the connection with our database --> (english_unusual_trips)
 
@@ -39,12 +58,17 @@
         --> In the file: " config_const.php "
 
 
-******* -- 4th step -- ************************************************************************************************
+
+
+******* -- 5th step -- *************************************** -- °° CREATE FUNCTION CONNEXION _ connect() °° -- ******
+
 
 --> Create a file: " pdo.php " in a folder: "lib"
 
 --> Then, link file "lib/pdo.php" to "index.php" with a "require_once"
 
 --> in the file "pdo.php" ==> Create a function of database connection [-  $connect = connect() -]
+
+    --> This function  --> [- connect () -] --> is used in the file: app/create.php
 
 

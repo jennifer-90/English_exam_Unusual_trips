@@ -1,6 +1,22 @@
 <?php
 
+/*  --------------------  FAIRE UN TABLEAU ----------------------- */
 
+
+?>
+
+<table>
+    <thead>
+        <tr>
+            <th>Informations</th>
+            <th>Values</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+<?php
 if(!empty($_POST)) {
     /*** ==>   -- Si ces champs ne sont pas vide.... -- ***/
 
@@ -8,15 +24,30 @@ if(!empty($_POST)) {
         /*** -- on fait un foreach pour pouvoir renomer nos "$key" avec le double
          * "$"  par les noms de champs tels que "login";"pwd";"email"... * -- ***/
         /*  $$key = $values;  */
-        echo $key . '=>' . $values;
+        echo '<tr><td>'.$key.'</td><td>'.$values.'</td></tr>';
     }
 }
-    else{
-        echo 'Veuillez completer les champs';
+else{
+    echo 'Veuillez completer les champs';
+    ?>
+
+    </tbody>
+</table>
 
 
 
-    /* Une fois que ça s'arfiche, on remet notre code dans add/create.php
+
+
+
+
+
+
+
+
+<?php
+
+
+    /* -------------  Une fois que ça s'arfiche, on remet notre code dans app/create.php -----------------
 
     puis on attaque:
 

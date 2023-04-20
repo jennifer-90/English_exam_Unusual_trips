@@ -8,13 +8,9 @@ require_once 'lib/pdo.php';
 require_once 'view/header.html';
 require_once 'view/menu.php';
 
-?>
 
 
 
-
-
-<?php
 
 
 ############################ -- Call to function for files && extensions -- ####################################

@@ -24,3 +24,5 @@ function connect(){
         return $connect;  /*** si le "try" se passe bien --> return $connect  ***/
     }
 }
+
+/* Nous allons utilisé cette fonction dans notre fichier app/create.php lors de notre connexion à la DB */
