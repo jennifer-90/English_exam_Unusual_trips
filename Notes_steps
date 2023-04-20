@@ -1,0 +1,35 @@
+
+******* 1st step *******
+
+--> Create the first file: " index.php "
+
+--> Then, create these files: " header.html "   &&  " menu.php "   &&   " footer.html "  &&  ect ect ...
+
+--> !! ATTENTION !! : Put "  require_one ''    ||/&&    include'' " in the file: " index.php "
+
+--> Link between files : [--[ ex: <a href="index.php?view=view/destinations"> ]--] --> in the file: " menu.php "
+
+    --> After that, create a constant --> Inside, there will be files extensions(ex:".html";".php") in a table(array).
+
+        --> This constant is in the file: "config.const.php"
+
+            --> Create of a condition for the different files(menu & profile,...) && different extensions(".html"||"
+            .php")
+
+                --> Then, create a function in the file: output_fct.php
+
+                    --> Finally, call your function in the file: "index.php"
+
+
+******* 2nd step *******
+
+--> Define(définir) elements for the connection with our database
+
+    --> const DB_NAME=''   &&   const DB_HOST=''   &&   const DB_USER''   &&   const DB_PWD=''
+
+        --> In the file: " config_const.php "
+
+
+******* 3rd step *******
+
+--> Create of a folder(=dossier): " lib " and inside, create a file: " pdo.php "
