@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 21 avr. 2023 à 21:11
+-- Généré le : ven. 21 avr. 2023 à 22:38
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -39,7 +39,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `lastlogin` datetime DEFAULT NULL,
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `login`, `pwd`, `email`, `country`, `lastlogin`, `created`) VALUES
+(1, 'Jen', 'jen', 'Jen@gmail.com', NULL, NULL, '2023-04-22 00:08:09'),
+(2, 'Jennifer', '$2y$10$nGPtuhBvkWwXUsJXVPiSqO00PSwLsn4SIaY2HDmTrB9QPyU857qPm', 'Jennifer@gmail.com', NULL, NULL, '2023-04-22 00:34:05');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
