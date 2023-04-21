@@ -3,7 +3,7 @@
 ?>
 
 
-<form action="index.php?view=app/create.php" method="post">
+<form action="index.php?view=app/create" method="post">
 
     <fieldset>
         <legend>

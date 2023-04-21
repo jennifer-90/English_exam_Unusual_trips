@@ -1,9 +1,11 @@
 <?php
 
 
-require_once 'config_const.php';
+require_once 'config.php';
 require_once 'lib/output_fct.php';
 require_once 'lib/pdo.php';
+
+$connect = connect();
 
 require_once 'view/header.html';
 require_once 'view/menu.php';

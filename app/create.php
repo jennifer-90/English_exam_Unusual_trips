@@ -35,12 +35,12 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
     /* 1) -- --- --- --- CONNEXION --- --- --- */
 
     /* -- On rappel la "global $connect" pour vérifier si on a une connexion avec la db -- */
-    global $connect;   /* -- Ou -->   $connect = connect(); -- */
+    $connect = connect();   /* -- Ou -->   $connect = connect(); -- */
 
     /* 2) -- --- --- --- PREPARATION DE LA REQUETE --- --- --- */
 
     /* -- On affecte à une nouvelle variable la requête SQL -- */
-    $sql = 'INSERT INTO user (login, email, pwd, country, created) VALUES (?,?,?,?,NOW())';
+    $sql = "INSERT INTO user (login, email, pwd, created) VALUES ( ?, ?, ?, NOW())";
 
 
     /* -- On affecte à une autre variable des paramètres qui seront utilisés lors de l'exécution*/
@@ -52,7 +52,7 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
     */
     $param = [trim($login),
               password_hash($pwd, PASSWORD_DEFAULT),
-              $email, $country];
+              $email];
 
 
     /* 3) -- --- --- --- QUERY --- --- --- */
