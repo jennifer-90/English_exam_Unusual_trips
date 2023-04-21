@@ -50,9 +50,11 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
                 --> "la valeur qu'on veut modifier
                 --> "la manière dont on veut le modifier
     */
-    $param = [trim($login),
-              password_hash($pwd, PASSWORD_DEFAULT),
-              $email];
+    $param = [
+            trim($login),
+            $email,
+            password_hash($pwd, PASSWORD_DEFAULT)
+    ];
 
 
     /* 3) -- --- --- --- QUERY --- --- --- */

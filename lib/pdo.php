@@ -11,7 +11,7 @@ function connect(){
     } else {                            /*** --- sinon...   --- ***/
 
         try{                            /*** --- try = essaye ---  ***/
-            $connect= new PDO('mysql: dbname='.DB_NAME.'; host'.DB_HOST.';charset=utf8', DB_USER,DB_PWD);
+            $connect= new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST.';charset=utf8', DB_USER,DB_PWD);
 
 
         } catch(PDOException $e){           /*** --- on met "$e" pour le "e" de exception --> PDOException ***/
