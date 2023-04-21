@@ -5,7 +5,15 @@
 
 
 /********** Si les champs ne sont pas vide ... **********/
-if(!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['pwd'])){
+
+if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && !empty($_POST['pwd'])){
+
+    /* Concernant le champs "email" --> "filter_var" --> permet de valider si une chaîne de caractères représentant une
+    adresse e-mail est valide ou non.
+    Le 2ème paramètres de cette fct native:
+        --> FILTER_VALIDATE_EMAIL = signifie que la fct va valider la valeur selon les règles de validation pour
+            une adresse e-mail. */
+
 
 
     /* -- foreach qui permet de renomer les $key par le nom des champs (login,pwd,email... via le double "$" de "key"-- */
@@ -68,18 +76,24 @@ if(!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['pwd'])){
     $insert->execute($param);
 
 
-    /* 4) -- --- --- --- RECUPERATION DES DONNEES --- --- --- */
+    /* 5) -- --- --- --- RECUPERATION DES DONNEES --- --- --- */
 
     if($insert->rowCount()){
-        echo'Vous êtes inscrit';
+        /* -- echo 'Vous êtes inscrit'; -- -->  On va le remplacer par un message via la superglobal: "$_SESSION" -- */
+        $_SESSION['alert'] = 'Utilisateur '. $login . 'a été créé avec succès';
+
+
     } else{
-        echo'problème de création d\'utilisateur, veuillez recommencer';
+        /* -- echo 'problème de création d\'utilisateur, veuillez recommencer'; -- */
+        $_SESSION['alert']= ' problème de création d\'utilisateur, veuillez recommencer';
         }
 
 
 
 } /********** Mais si c'est ces champs sont vides.... (Toujours dans le tout 1er "if") **********/
 else{
-    echo'Veuillez complèter les champs';
+    /* -- echo'Veuillez complèter les champs'; --*/
+    $_SESSION['alert'] = 'Veuillez complèter les champs';
+    }
 
-}
+
