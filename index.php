@@ -6,6 +6,7 @@ session_start(['cookie_lifetime' => 3600]);
 require_once 'config.php';
 require_once 'lib/output_fct.php';
 require_once 'lib/pdo.php';
+require_once 'lib/user.php';
 
 $connect = connect();
 

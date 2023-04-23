@@ -1,5 +1,8 @@
 <?php
 
+$url = 'index.php?view=view/create';
+
+
 /* -- Création du code qui va permettre de récupérer les infos du formulaire et de créer un nouveau user dans la DB -- */
 
 
@@ -13,6 +16,19 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
     Le 2ème paramètres de cette fct native:
         --> FILTER_VALIDATE_EMAIL = signifie que la fct va valider la valeur selon les règles de validation pour
             une adresse e-mail. */
+
+
+
+
+
+    if (userExists('login', $_POST['login'])) {
+        $_SESSION['alert'] = 'L\'utilisateur existe déjà!';
+        header('Location: ' . $url);
+        die;
+    }
+
+
+
 
 
 
@@ -90,6 +106,12 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
         /* -- echo 'Vous êtes inscrit'; -- -->  On va le remplacer par un message via la superglobal: "$_SESSION" -- */
         $_SESSION['alert'] = 'Utilisateur '. $login . 'a été créé avec succès';
         $_SESSION['alert-color'] = 'success';
+        $url = 'index.php?view=view/login';
+
+
+
+
+
 
 
     } else{
@@ -104,5 +126,8 @@ else{
     /* -- echo'Veuillez complèter les champs'; --*/
     $_SESSION['alert'] = 'Veuillez complèter les champs';
     }
+header('Location: ' . $url);
+die;
+
 
 
