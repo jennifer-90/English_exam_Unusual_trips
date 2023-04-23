@@ -55,7 +55,7 @@
 
     --> const DB_NAME=''   &&   const DB_HOST=''   &&   const DB_USER''   &&   const DB_PWD=''
 
-        --> In the file: " config_const.php "
+        --> In the file: " config.php "
 
 
 
@@ -70,5 +70,7 @@
 --> in the file "pdo.php" ==> Create a function of database connection [-  $connect = connect() -]
 
     --> This function  --> [- connect () -] --> is used in the file: app/create.php
+
+--> Call the function in the file : " index.php "
 
 

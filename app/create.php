@@ -81,8 +81,15 @@ if(!empty($_POST['login']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)
     /* 5) -- --- --- --- RECUPERATION DES DONNEES --- --- --- */
 
     if($insert->rowCount()){
+
+        $user_id = $connect->lastInsertId();
+        /* --  lastInsertId():
+                    --> Récupère l'id généré lors de l'insertion d'une nouvelle ligne dans une table de la db
+                    --> On utilisera cette nvlle variable pour récupérer une photo envoyé par l'utilisateur    -- */
+
         /* -- echo 'Vous êtes inscrit'; -- -->  On va le remplacer par un message via la superglobal: "$_SESSION" -- */
         $_SESSION['alert'] = 'Utilisateur '. $login . 'a été créé avec succès';
+        $_SESSION['alert-color'] = 'success';
 
 
     } else{
